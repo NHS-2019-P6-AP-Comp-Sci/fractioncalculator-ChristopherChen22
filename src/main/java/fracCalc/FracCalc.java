@@ -56,19 +56,19 @@ public class FracCalc {
  
     }
     public static String findWhole(String str) {
-    	if(str.contains("_")) {
+    	if(str.indexOf("_") == 1) {
     		return str.substring(0,str.indexOf('_'));
     	}
-    	else if(str.contains("/")) {
+    	else if(str.indexOf("/") == 1) {
     		return "0";
     	}
     	else return str;
     }
     public static String findNum(String str) {
-    	if(str.contains("_")) {
+    	if(str.indexOf("_") != 1) {
     		return str.substring( str.indexOf('_') + 1, str.indexOf('/'));
     	}
-    	else if(str.contains("/")) {
+    	else if(str.indexOf("/") != 1) {
     		return str.substring(0, str.indexOf('/'));
     	}
     	else {
@@ -76,7 +76,7 @@ public class FracCalc {
     	}
     }
     public static String findDenom(String str) {
-    	if(str.contains("/")) {
+    	if(str.indexOf("/") == 1) {
     		return str.substring(str.indexOf("/") + 1);
     		
     	}
