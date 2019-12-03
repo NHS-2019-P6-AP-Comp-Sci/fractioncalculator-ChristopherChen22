@@ -146,9 +146,7 @@ public class FracCalc {
         return total;
  }
 
-    	
-    
-        public static String subtract(int whole1, int nom1, int denom1, int whole2, int nom2, int denom2) {
+    	public static String subtract(int whole1, int nom1, int denom1, int whole2, int nom2, int denom2) {
             
             int denominator = denom1 * denom2;
             
@@ -203,19 +201,18 @@ public class FracCalc {
             double testDem = denominator;
             if ((testNum / testDem) == 0.0) {
                     total = whole + "";
-                    // test to see if there is no whole number (make total just a fraction)
+                   
             } else if (whole == 0) {
                     total = numerator + "/" + denominator;
             }
-            // total =
-            // simplifier(total);*****************************************************
+            
             return total;
      }
 
         public static String divide(int whole1, int nom1, int denom1, int whole2, int nom2, int denom2, String first, String second) {
-            // multiply (find) denominator
+            
             int denominator = denom1;
-            // find individual numerators
+           
             int numerator1 = whole1 * denom1;
             int numerator2 = whole2 * denom2;
             if (first.indexOf("-") != -1 && second.indexOf("-") != -1) {
@@ -231,9 +228,9 @@ public class FracCalc {
             denominator *= numerator2;
             int whole = 0;
             if (numerator / denominator >= 1) {
-                    int addWhole = numerator / denominator; // 12
-                    numerator = Math.abs((addWhole * denominator) - numerator); // 0
-                    whole += addWhole; // 12
+                    int addWhole = numerator / denominator; 
+                    numerator = Math.abs((addWhole * denominator) - numerator);
+                    whole += addWhole; 
                     denominator = Math.abs(denominator);
             }
            
